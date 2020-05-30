@@ -1,0 +1,48 @@
+﻿@model $safeprojectname$.Models.DemandViewModel.RelaseDemandViewModel
+@{
+    ViewBag.Title = "RelaseDemand";
+    Layout = "~/Views/Shared/_LayoutPage1Title.cshtml";
+}
+
+<div class="page-content-inner pt--75 pt-md--55">
+    <section class="contact-area mb--75 mb-md--55">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-5 mb-sm--30">
+                    <div class="heading mb--32">
+                        <h2>Get In Touch</h2>
+                        <hr class="delimeter">
+                    </div>
+                    <div class="contact-info mb--20">
+                        <p>
+                            <span>在这里，你可以提交你的需求信息，待审核通过后，等待供应商家报价</span>
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-7 offset-lg-1">
+                    <div class="heading mb--40">
+                        <h2>Contact Us</h2>
+                        <hr class="delimeter">
+                    </div>
+                    @using (Html.BeginForm())
+                    {
+                        @Html.LabelFor(model => model.Title, htmlAttributes: new { @class = "form__label" })
+                        @Html.EditorFor(model => model.Title, new { htmlAttributes = new { placeholder = "请输入标题", @class = "form__input mb--30" } })
+                        @Html.ValidationMessageFor(model => model.Title, "", new { @class = "text-danger" })
+
+                        @Html.LabelFor(model => model.Introduction, htmlAttributes: new { @class = "form__label" })
+                        @Html.EditorFor(model => model.Introduction, new { htmlAttributes = new { placeholder = "请输入简介", @class = "form__input mb--30" } })
+                        @Html.ValidationMessageFor(model => model.Introduction, "", new { @class = "text-danger" })
+
+                        @Html.LabelFor(model => model.Content, htmlAttributes: new { @class = "form__label" })
+                        @Html.TextAreaFor(model => model.Content,htmlAttributes: new { placeholder = "请输入详细信息", @class = "form__input form__input--textarea mb--30" })
+                        @Html.ValidationMessageFor(model => model.Content, "", new { @class = "text-danger" })
+                        <button type="submit" class="btn btn-shape-round form__submit">提交需求</button>
+                        <div class="form__output"></div>
+                    }
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+

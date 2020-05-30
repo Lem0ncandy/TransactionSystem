@@ -1,0 +1,77 @@
+﻿
+@{
+    ViewBag.Title = "FeedbackDetail";
+    Layout = "~/Views/Shared/_LayoutPage1CustServerNoTitle.cshtml";
+}
+
+@{
+
+    ViewBag.Title = "DemaDetail";
+}
+
+<div class="inner-page-content">
+    <!-- Single Post Area Start -->
+    <div class="single-post-area mb--75 mb-md--55">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-9">
+                    <!-- Single Post Start -->
+                    <article class="single-post mb--75 mb-md--55 pb--75 pb-md--55">
+                        <header class="single-post__header">
+                            <h2 class="single-post__title">Consult lorem Ipsum is simply dummy text of the printing and typesetting</h2>
+                            <div class="single-post__media">
+
+                            </div>
+                            <div class="single-post__header-meta">
+                                <span class="posted-on">Date: 13 feb 2019</span>
+                                <span class="post-category">
+                                    <a href="blog-details-image.html">Business</a>
+                                </span>
+                            </div>
+                        </header>
+                        <div class="single-post__info">
+
+                            <div class="row mb--80">
+                                <div class="col-md-6 mb-sm--40">
+                                    <figure>
+                                        <img src="assets/img/blog/blog-01.jpg" alt="blog details" class="w-100">
+                                    </figure>
+                                </div>
+                                <div class="col-md-6">
+                                    <figure>
+                                        <img src="assets/img/blog/blog-02.jpg" alt="blog details" class="w-100">
+                                    </figure>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-9 offset-lg-3">
+                                    <blockquote>@ViewBag.FeedBack.Title</blockquote>
+                                    <p>@ViewBag.FeedBack.Content</p>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                    <!-- Single Post End -->
+                    <!-- Comment Area Start -->
+                    <section class="comment">
+                        <div class="comment-respond" style="float:right">
+                            <form action="@Url.Action("FeedbackList","CustServer")" class="form comment-form">
+                                <div class="form__group">
+                                    <div class="form-row">
+                                        <div class="col-12">
+                                            <button type="submit" class="btn btn-size-sm">返回</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </section>
+                    <!-- Comment Area End -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Single Post Area End -->
+    <!-- Related Post Area Start -->
+    <!-- Related Post Area End -->
+</div>

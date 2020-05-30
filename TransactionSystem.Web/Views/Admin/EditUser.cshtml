@@ -1,0 +1,38 @@
+﻿@model TransactionSystem.Domain.DTO.UserDTO
+@{
+    ViewBag.TitleA = "修改信息";
+    Layout = "~/Views/Shared/_LayoutPage1Title.cshtml";
+}
+
+<div class="page-content-inner pt--75 pt-md--55">
+    <!-- Contact Area Start -->
+    <section class="contact-area mb--75 mb-md--55">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-7 offset-lg-1">
+                    <div class="heading mb--40">
+                        <hr class="delimeter">
+                    </div>
+                    @Html.Raw(Model.UserId)
+                    @using (Html.BeginForm("EditUserAction","Admin"))
+                    {
+                        @Html.EditorFor(model => model.Email, new { htmlAttributes = new { placeholder = "登录邮箱*", @class = "form__input mb--30" } })
+                        @Html.EditorFor(model => model.Password, new { htmlAttributes = new { placeholder = "密码*", @class = "form__input mb--30" } })
+                        <input type="text" name="con_email" id="con_email" class="form__input mb--30" placeholder="确认密码*">
+                        @Html.EditorFor(model => model.CompanyName, new { htmlAttributes = new { placeholder = "公司名*", @class = "form__input mb--30" } })
+                        @Html.EditorFor(model => model.TelphoneNumber, new { htmlAttributes = new { placeholder = "联系电话", @class = "form__input mb--30" } })
+                        @Html.EditorFor(model => model.UserType, new { htmlAttributes = new { placeholder = "类型*", @class = "form__input mb--30" } })
+                        @Html.EditorFor(model => model.Address, new { htmlAttributes = new { placeholder = "地址*", @class = "form__input mb--30" } })
+                        @Html.HiddenFor(model => model.UserId);
+                        <button type="submit" class="btn btn-shape-round form__submit">保存</button>
+                        <div class="form__output"></div>
+                    }
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Contact Area End -->
+    <!-- Google Map Area Start -->
+    <!-- Google Map Area End -->
+</div>
+

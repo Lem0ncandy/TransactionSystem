@@ -1,0 +1,104 @@
+<VSTemplate Version="3.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" Type="Project">
+  <TemplateData>
+    <Name>TransactionSystem.Domain</Name>
+    <Description>&lt;没有可用的说明&gt;</Description>
+    <ProjectType>CSharp</ProjectType>
+    <ProjectSubType>
+    </ProjectSubType>
+    <SortOrder>1000</SortOrder>
+    <CreateNewFolder>true</CreateNewFolder>
+    <DefaultName>TransactionSystem.Domain</DefaultName>
+    <ProvideDefaultName>true</ProvideDefaultName>
+    <LocationField>Enabled</LocationField>
+    <EnableLocationBrowseButton>true</EnableLocationBrowseButton>
+    <Icon>__TemplateIcon.ico</Icon>
+  </TemplateData>
+  <TemplateContent>
+    <Project TargetFileName="TransactionSystem.Domain.csproj" File="TransactionSystem.Domain.csproj" ReplaceParameters="true">
+      <ProjectItem ReplaceParameters="true" TargetFileName="App.config">App.config</ProjectItem>
+      <Folder Name="BLL" TargetFolderName="BLL">
+        <ProjectItem ReplaceParameters="true" TargetFileName="CommentManager.cs">CommentManager.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="DemandManager.cs">DemandManager.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="FeedBackManager.cs">FeedBackManager.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="OrderManager.cs">OrderManager.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="ReplyManager.cs">ReplyManager.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="UserManager.cs">UserManager.cs</ProjectItem>
+      </Folder>
+      <Folder Name="DAL" TargetFolderName="DAL">
+        <ProjectItem ReplaceParameters="true" TargetFileName="BaseService.cs">BaseService.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="CommentService.cs">CommentService.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="DemandService.cs">DemandService.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="FeedBackService.cs">FeedBackService.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="OrderService.cs">OrderService.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="ReplyService.cs">ReplyService.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="UserService.cs">UserService.cs</ProjectItem>
+      </Folder>
+      <Folder Name="DTO" TargetFolderName="DTO">
+        <ProjectItem ReplaceParameters="true" TargetFileName="CommentDTO.cs">CommentDTO.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="DemandDTO.cs">DemandDTO.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="FeedBackDTO.cs">FeedBackDTO.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="OrderDTO.cs">OrderDTO.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="ReplyDTO.cs">ReplyDTO.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="UserDTO.cs">UserDTO.cs</ProjectItem>
+      </Folder>
+      <Folder Name="IBLL" TargetFolderName="IBLL">
+        <ProjectItem ReplaceParameters="true" TargetFileName="ICommentManager.cs">ICommentManager.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="IDemandManager.cs">IDemandManager.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="IFeedBackManager.cs">IFeedBackManager.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="IOrderManager.cs">IOrderManager.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="IReplyManager.cs">IReplyManager.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="IUserManager.cs">IUserManager.cs</ProjectItem>
+      </Folder>
+      <Folder Name="IDAL" TargetFolderName="IDAL">
+        <ProjectItem ReplaceParameters="true" TargetFileName="IBaseService.cs">IBaseService.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="ICommentService.cs">ICommentService.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="IDemandService.cs">IDemandService.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="IFeedBackService.cs">IFeedBackService.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="IOrderService.cs">IOrderService.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="IReplyService.cs">IReplyService.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="IUserService.cs">IUserService.cs</ProjectItem>
+      </Folder>
+      <Folder Name="Migrations" TargetFolderName="Migrations">
+        <ProjectItem ReplaceParameters="true" TargetFileName="201911150621177_createdb.cs">201911150621177_createdb.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="201911150621177_createdb.designer.cs">201911150621177_createdb.designer.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="201911150621177_createdb.resx">201911150621177_createdb.resx</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="201911150759399_createdb1.cs">201911150759399_createdb1.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="201911150759399_createdb1.designer.cs">201911150759399_createdb1.designer.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="201911150759399_createdb1.resx">201911150759399_createdb1.resx</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="201911160844266_createdb2.cs">201911160844266_createdb2.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="201911160844266_createdb2.designer.cs">201911160844266_createdb2.designer.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="201911160844266_createdb2.resx">201911160844266_createdb2.resx</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="201911160858085_createdb3.cs">201911160858085_createdb3.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="201911160858085_createdb3.designer.cs">201911160858085_createdb3.designer.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="201911160858085_createdb3.resx">201911160858085_createdb3.resx</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="201911161250018_createdb4.cs">201911161250018_createdb4.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="201911161250018_createdb4.designer.cs">201911161250018_createdb4.designer.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="201911161250018_createdb4.resx">201911161250018_createdb4.resx</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="201911180342276_createdb5.cs">201911180342276_createdb5.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="201911180342276_createdb5.designer.cs">201911180342276_createdb5.designer.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="201911180342276_createdb5.resx">201911180342276_createdb5.resx</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="201911180446098_createdb6.cs">201911180446098_createdb6.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="201911180446098_createdb6.designer.cs">201911180446098_createdb6.designer.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="201911180446098_createdb6.resx">201911180446098_createdb6.resx</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="201911180740458_createdb7.cs">201911180740458_createdb7.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="201911180740458_createdb7.designer.cs">201911180740458_createdb7.designer.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="201911180740458_createdb7.resx">201911180740458_createdb7.resx</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="Configuration.cs">Configuration.cs</ProjectItem>
+      </Folder>
+      <Folder Name="Model" TargetFolderName="Model">
+        <ProjectItem ReplaceParameters="true" TargetFileName="BaseEntity.cs">BaseEntity.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="Comment.cs">Comment.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="Demand.cs">Demand.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="FeedBack.cs">FeedBack.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="Order.cs">Order.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="Reply.cs">Reply.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="TransactionContext.cs">TransactionContext.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="User.cs">User.cs</ProjectItem>
+      </Folder>
+      <ProjectItem ReplaceParameters="true" TargetFileName="packages.config">packages.config</ProjectItem>
+      <Folder Name="Properties" TargetFolderName="Properties">
+        <ProjectItem ReplaceParameters="true" TargetFileName="AssemblyInfo.cs">AssemblyInfo.cs</ProjectItem>
+      </Folder>
+    </Project>
+  </TemplateContent>
+</VSTemplate>

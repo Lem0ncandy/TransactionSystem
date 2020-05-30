@@ -1,0 +1,167 @@
+﻿@model $safeprojectname$.Models.AdminViewModel.UserListViewModel
+@{
+    ViewBag.TitleA = "用户管理";
+    Layout = "~/Views/Shared/_LayoutPage1Title.cshtml";
+}
+
+<div class="main-content-wrapper">
+    <div class="page-content-inner ptb--80 ptb-md--60">
+        <div class="container">
+            <div class="row">
+                <div class="col-12" id="main-content">
+                    <div class="table-content table-responsive">
+                        <div class="table-content table-responsive">
+                            <table class="table compare-table">
+                                <tbody>
+                                    <tr>
+                                        <td style="background-color: #f6f6f6;"><b>用户ID</b></td>
+                                        <td style="background-color: #f6f6f6;"><b>登录邮箱</b></td>
+                                        <td style="background-color: #f6f6f6;"><b>创建时间</b></td>
+                                        <td style="background-color: #f6f6f6;"><b>密码</b></td>
+                                        <td style="background-color: #f6f6f6;"><b>用户类型</b></td>
+                                        <td style="background-color: #f6f6f6;"><b>公司名称</b></td>
+                                        <td style=" border-width:0px;"></td>
+                                    </tr>
+                                    @foreach (var item in Model.Users)
+                                    {
+                                        <tr>
+                                            <td style="background-color: white;">@item.UserId.ToString()</td>
+                                            <td>
+                                                <span class="product-price-wrapper">
+                                                    <span class="money">@item.Email</span>
+                                                </span>
+                                            </td>
+                                            <td>
+                                                <span class="product-price-wrapper">
+                                                    <span class="money">@item.CreateTime.ToLongDateString()@item.CreateTime.ToLongTimeString()</span>
+                                                </span>
+                                            </td>
+                                            <td>
+                                                <span class="product-price-wrapper">
+                                                    <span class="money">@item.Password</span>
+                                                </span>
+                                            </td>
+                                            <td>
+                                                @if (item.UserType == 100001)
+                                                {
+                                                    @Html.Raw("用户");
+                                                }
+                                                else if (item.UserType == 100002)
+                                                {
+                                                    @Html.Raw("客服户");
+                                                }
+                                                else if (item.UserType == 100002)
+                                                {
+                                                    @Html.Raw("管理员");
+                                                }
+                                                else
+                                                {
+                                                    @Html.Raw("");
+                                                }
+                                            </td>
+                                            <td>@item.CompanyName</td>
+                                            <td style=" border-width:0px;">
+                                                <div style="display:flex; flex-wrap:nowrap;">
+                                                    @using (Html.BeginForm("EditUser", "Admin"))
+                                                    {
+                                                        <input type="hidden" value="@item.UserId.ToString()" name="Id"/>
+                                                        <button type="submit" class="btn btn-size-md" style="width:90px; margin-right:10px;">修改</button>
+                                                    }
+                                                    @using (Html.BeginForm("DeletUser", "Admin"))
+                                                    {
+                                                        <input type="hidden" value="@item.UserId.ToString()" name="Id" />
+                                                        <button type="submit" class="btn btn-size-md" style="width:90px; background-color:red;">删除</button>
+                                                    }
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    }
+                                    @*<tr>
+                                            <th style="background-color: white;">Sku</th>
+                                            <td>REF. LA-887</td>
+                                            <td>REF. LA-887</td>
+                                            <td>REF. LA-887</td>
+                                            <td></td>
+                                            <td></td>
+                                            <td style=" border-width:0px;">
+                                                <div style="display:flex; flex-wrap:nowrap;">
+                                                    <button class="btn btn-size-md" style="width:90px; margin-right:10px;">按钮</button>
+                                                    <button class="btn btn-size-md" style="width:90px; background-color:red;">按钮</button>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th style="background-color: white;">Description</th>
+                                            <td class="text-center">
+                                                Donec accumsan auctor iaculis. Sed suscipit arcu
+                                                ligula, at egestas…
+                                            </td>
+                                            <td class="text-center">
+                                                Donec accumsan auctor iaculis. Sed suscipit arcu
+                                                ligula, at egestas…
+                                            </td>
+                                            <td class="text-center">
+                                                Donec accumsan auctor iaculis. Sed suscipit arcu
+                                                ligula, at egestas…
+                                            </td>
+                                            <td></td>
+                                            <td></td>
+                                            <td style=" border-width:0px;">
+                                                <div style="display:flex; flex-wrap:nowrap;">
+                                                    <button class="btn btn-size-md" style="width:90px; margin-right:10px;">按钮</button>
+                                                    <button class="btn btn-size-md" style="width:90px; background-color:red;">按钮</button>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th style="background-color: white;">Availability</th>
+                                            <td>In stock</td>
+                                            <td>In stock</td>
+                                            <td>In stock</td>
+                                            <td></td>
+                                            <td></td>
+                                            <td style=" border-width:0px;">
+                                                <div style="display:flex; flex-wrap:nowrap;">
+                                                    <button class="btn btn-size-md" style="width:90px; margin-right:10px;">按钮</button>
+                                                    <button class="btn btn-size-md" style="width:90px; background-color:red;">按钮</button>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th style="background-color: white;">Weight</th>
+                                            <td>N/A</td>
+                                            <td>N/A</td>
+                                            <td>N/A</td>
+                                            <td></td>
+                                            <td></td>
+                                            <td style=" border-width:0px;">
+                                                <div style="display:flex; flex-wrap:nowrap;">
+                                                    <button class="btn btn-size-md" style="width:90px; margin-right:10px;">按钮</button>
+                                                    <button class="btn btn-size-md" style="width:90px; background-color:red;">按钮</button>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th style="background-color: white;">Dimensions</th>
+                                            <td>N/A</td>
+                                            <td>N/A</td>
+                                            <td>N/A</td>
+                                            <td></td>
+                                            <td></td>
+                                            <td style=" border-width:0px;">
+                                                <div style="display:flex; flex-wrap:nowrap;">
+                                                    <button class="btn btn-size-md" style="width:90px; margin-right:10px;">按钮</button>
+                                                    <button class="btn btn-size-md" style="width:90px; background-color:red;">按钮</button>
+                                                </div>
+                                            </td>
+                                        </tr>*@
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

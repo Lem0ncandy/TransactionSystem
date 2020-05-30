@@ -1,0 +1,162 @@
+﻿@model TransactionSystem.Domain.DTO.DemandDTO
+@{
+
+    var demand = new $safeprojectname$.Models.CommentViewModel.RelaseCommentViewModel();
+    $safeprojectname$.Models.CommentViewModel.RelaseCommentViewModel comment = new $safeprojectname$.Models.CommentViewModel.RelaseCommentViewModel();
+    ViewBag.Title = "DemaDetail";
+    Layout = "~/Views/Shared/_LayoutPage1.cshtml";
+}
+
+<main class="main-content-wrapper">
+
+
+    <div class="inner-page-content">
+        <!-- Single Post Area Start -->
+        <div class="single-post-area mb--75 mb-md--55">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-9">
+                        <!-- Single Post Start -->
+                        <article class="">
+                            <header class="single-post__header">
+                                <h2 class="single-post__title">@Model.Title</h2>
+                                <div class="single-post__header-meta">
+                                    <span class="posted-on">日期: @Model.CreateTime.ToString()</span>
+                                    <span class="post-category">
+                                        <!-- <a href="blog-details-image.html">Business</a> -->
+                                        <span class="posted-on">报价人: @Model.CompanyName</span>
+                                    </span>
+                                </div>
+                            </header>
+                            <div class="single-post__info">
+
+                                <div class="row mb--80">
+                                    <div class="col-md-6 mb-sm--40">
+                                        <figure>
+                                            <img src="~/image/blog/blog-01.jpg" alt="blog details" class="w-100">
+                                        </figure>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <figure>
+                                            <img src="~/image/blog/blog-02.jpg" alt="blog details" class="w-100">
+                                        </figure>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div>
+                                        <!-- <div class="col-lg-9 offset-lg-3"> -->
+                                        <blockquote>@Model.Introduction</blockquote>
+                                        <p>(@Model.Content)</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                        <!-- Single Post End -->
+                        <!-- Comment Area Start -->
+                        <header class="single-post__header"></header>
+                        <section class="comment">
+                            <h2 class="comment-title">@ViewBag.comment.Count 条报价</h2>
+                            <ul class="comment-list mb--45">
+                                @foreach (var item in ViewBag.comment)
+                                {
+                                    <li>
+                                        <div class="single-comment">
+                                            <figure class="comment-avatar">
+                                                <img src="~/image/others/avatar-large-2.png" alt="Avatar">
+                                            </figure>
+                                            <div class="comment-info">
+                                                <div class="comment-meta">
+                                                    <h4>@item.CompanyName</h4>
+                                                    <div class="metadata">
+                                                        <h4>@item.MinPrice￥~@item.MaxPrice￥</h4>
+                                                        <span class="comment-date">@item.CreateTime.ToShortDateString()</span>
+                                                        <a href="@Url.Action("CreateOrder")?CommentId=@item.CommentId" class="comment-reply-link">选择此报价</a>
+                                                    </div>
+                                                </div>
+                                                <div class="comment-content">
+                                                    <h6>@item.Title</h6>
+                                                    <p>@item.Content</p>
+                                                    <a href="@Url.Action("RelaseReply","Reply")?CommentId=@item.CommentId" class="comment-reply-link">回复</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        @foreach (var i in ViewBag.reply)
+                                        {
+                                            if (i.IsNull != true && i.CommentId == item.CommentId)
+                                            {
+                                                <ul class="children">
+                                                    <li>
+                                                        <div class="single-comment">
+                                                            <figure class="comment-avatar">
+                                                                <img src="~/image/others/avatar-large-2.png" alt="Avatar">
+                                                            </figure>
+                                                            <div class="comment-info">
+                                                                <div class="comment-meta">
+                                                                    <h4>@i.CompanyName</h4>
+                                                                    <div class="metadata">
+                                                                        <span class="comment-date">@i.CreateTime.ToShortDateString()</span>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="comment-content">
+                                                                    <p>@i.Content</p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            }
+
+                                        }
+
+                                    </li>
+                                }
+                            </ul>
+                            <div class="comment-respond">
+                                <h3 class="comment-reply-title">报价信息表</h3>
+                                @using (Html.BeginForm("RelaseComment", "Deamd"))
+                                {
+                                    <div class="form__group mb--25 mb-sm--20">
+                                        <div class="form-row">
+                                            <div class="col-md-4 mb-sm--20">
+                                                @Html.Editor("comment_Title", new { htmlAttributes = new { placeholder = "标题*", @class = "form__input" } })
+                                            </div>
+                                            <div class="col-md-4 mb-sm--20">
+                                                @Html.Editor("comment_MinPrice", new { htmlAttributes = new { placeholder = "最低报价*", @class = "form__input" } })
+                                            </div>
+                                            <div class="col-md-4">
+                                                @Html.Editor("comment_MaxPrice", new { htmlAttributes = new { placeholder = "最大报价*", @class = "form__input" } })
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form__group mb--25 mb-sm--20">
+                                        <div class="form-row">
+                                            <div class="col-12">
+                                                @Html.TextArea("comment_Content", new { placeholder = "内容*", @class = "form__input form__input--textarea" })
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form__group">
+                                        <div class="form-row">
+                                            <div class="col-12">
+                                                <button type="submit" class="btn btn-size-sm">报价</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <input type="hidden" value="@Model.UserId.ToString()" name="comment_UserId" />
+                                    <input type="hidden" value="@Model.Id.ToString()" name="comment_DemandId" />
+                                }
+                            </div>
+                        </section>
+                        <!-- Comment Area End -->
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Single Post Area End -->
+        <!-- Related Post Area Start -->
+        <!-- Related Post Area End -->
+    </div>
+</main>

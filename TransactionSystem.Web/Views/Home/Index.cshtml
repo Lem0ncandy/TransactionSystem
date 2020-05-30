@@ -1,0 +1,38 @@
+﻿@model IEnumerable<TransactionSystem.Domain.DTO.DemandDTO>
+@{
+    ViewBag.TitleA = "世界那么大，总有一个适合你！";
+    Layout = "~/Views/Shared/_LayoutPage1Title.cshtml";
+}
+
+<div class="shop-page-wrapper shop-fullwidth ptb--80">
+    <div class="container shop-products list">
+        <div class="row">
+            @foreach (var item in Model)
+            {
+                <div class="col-xl-3 col-md-4 col-sm-6 mb--50">
+                    <div class="payne-product-list">
+                        <div class="product__inner">
+                            <div class="product__info">
+                                <h3 class="product__title">
+                                    <a href="product-details.html">@item.Title</a>
+                                </h3>
+                                <div class="product__price">
+                                    <span class="money">@item.CompanyName</span>
+                                </div>
+                                <p class="product__short-description">
+                                    @item.Introduction
+                                </p>
+                                <div class="d-flex product__list-action">
+                                    @Html.ActionLink("查看详情", "DemandDetail","Deamd",new {id = item.Id },new {@class = "btn btn-size-sm" })
+                                    @*<a href="cart.html" class="btn btn-size-sm">查看详情</a>*@
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+        <div class="row">
+        </div>
+    </div>
+</div>

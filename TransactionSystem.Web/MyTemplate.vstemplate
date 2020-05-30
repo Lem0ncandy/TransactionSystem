@@ -1,0 +1,233 @@
+<VSTemplate Version="3.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" Type="Project">
+  <TemplateData>
+    <Name>TransactionSystem.Web</Name>
+    <Description>&lt;没有可用的说明&gt;</Description>
+    <ProjectType>CSharp</ProjectType>
+    <ProjectSubType>
+    </ProjectSubType>
+    <SortOrder>1000</SortOrder>
+    <CreateNewFolder>true</CreateNewFolder>
+    <DefaultName>TransactionSystem.Web</DefaultName>
+    <ProvideDefaultName>true</ProvideDefaultName>
+    <LocationField>Enabled</LocationField>
+    <EnableLocationBrowseButton>true</EnableLocationBrowseButton>
+    <Icon>__TemplateIcon.ico</Icon>
+  </TemplateData>
+  <TemplateContent>
+    <Project TargetFileName="TransactionSystem.Web.csproj" File="TransactionSystem.Web.csproj" ReplaceParameters="true">
+      <Folder Name="App_Data" TargetFolderName="App_Data" />
+      <Folder Name="App_Start" TargetFolderName="App_Start">
+        <ProjectItem ReplaceParameters="true" TargetFileName="BundleConfig.cs">BundleConfig.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="FilterConfig.cs">FilterConfig.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="RouteConfig.cs">RouteConfig.cs</ProjectItem>
+      </Folder>
+      <Folder Name="Content" TargetFolderName="Content">
+        <ProjectItem ReplaceParameters="true" TargetFileName="bootstrap-theme.css">bootstrap-theme.css</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="bootstrap-theme.css.map">bootstrap-theme.css.map</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="bootstrap-theme.min.css">bootstrap-theme.min.css</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="bootstrap-theme.min.css.map">bootstrap-theme.min.css.map</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="bootstrap.css">bootstrap.css</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="bootstrap.css.map">bootstrap.css.map</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="bootstrap.min.css">bootstrap.min.css</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="bootstrap.min.css.map">bootstrap.min.css.map</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="main.css">main.css</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="Site.css">Site.css</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="vendor.css">vendor.css</ProjectItem>
+      </Folder>
+      <Folder Name="Controllers" TargetFolderName="Controllers">
+        <ProjectItem ReplaceParameters="true" TargetFileName="AdminController.cs">AdminController.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="CommentController.cs">CommentController.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="CustServerController.cs">CustServerController.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="DeamdController.cs">DeamdController.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="HomeController.cs">HomeController.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="ReplyController.cs">ReplyController.cs</ProjectItem>
+      </Folder>
+      <ProjectItem ReplaceParameters="false" TargetFileName="favicon.ico">favicon.ico</ProjectItem>
+      <Folder Name="fonts" TargetFolderName="fonts">
+        <ProjectItem ReplaceParameters="false" TargetFileName="Billy Ohio.woff2">Billy Ohio.woff2</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="Flaticon.woff2">Flaticon.woff2</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="fontawesome-webfont.woff2">fontawesome-webfont.woff2</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="glyphicons-halflings-regular.eot">glyphicons-halflings-regular.eot</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="glyphicons-halflings-regular.svg">glyphicons-halflings-regular.svg</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="glyphicons-halflings-regular.ttf">glyphicons-halflings-regular.ttf</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="glyphicons-halflings-regular.woff">glyphicons-halflings-regular.woff</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="glyphicons-halflings-regular.woff2">glyphicons-halflings-regular.woff2</ProjectItem>
+      </Folder>
+      <ProjectItem ReplaceParameters="true" TargetFileName="Global.asax">Global.asax</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="Global.asax.cs">Global.asax.cs</ProjectItem>
+      <Folder Name="image" TargetFolderName="image">
+        <Folder Name="banner" TargetFolderName="banner">
+          <ProjectItem ReplaceParameters="false" TargetFileName="banner-01.jpg">banner-01.jpg</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="banner-02.jpg">banner-02.jpg</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="banner-bg-01.jpg">banner-bg-01.jpg</ProjectItem>
+        </Folder>
+        <Folder Name="bg" TargetFolderName="bg">
+          <ProjectItem ReplaceParameters="false" TargetFileName="blog-breadcrumb.jpg">blog-breadcrumb.jpg</ProjectItem>
+        </Folder>
+        <Folder Name="blog" TargetFolderName="blog">
+          <ProjectItem ReplaceParameters="false" TargetFileName="blog-01.jpg">blog-01.jpg</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="blog-02.jpg">blog-02.jpg</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="blog-03.jpg">blog-03.jpg</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="blog-06.jpg">blog-06.jpg</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="blog-07.jpg">blog-07.jpg</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="blog-08.jpg">blog-08.jpg</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="blog-09.jpg">blog-09.jpg</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="blog-11-560x345.png">blog-11-560x345.png</ProjectItem>
+        </Folder>
+        <Folder Name="icons" TargetFolderName="icons">
+          <ProjectItem ReplaceParameters="false" TargetFileName="cross.png">cross.png</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="grid.png">grid.png</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="list.png">list.png</ProjectItem>
+        </Folder>
+        <Folder Name="logo" TargetFolderName="logo">
+          <ProjectItem ReplaceParameters="false" TargetFileName="logo.png">logo.png</ProjectItem>
+        </Folder>
+        <Folder Name="others" TargetFolderName="others">
+          <ProjectItem ReplaceParameters="false" TargetFileName="avatar-large-2.png">avatar-large-2.png</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="comment-1.jpg">comment-1.jpg</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="comment-2.jpg">comment-2.jpg</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="comment-3.jpg">comment-3.jpg</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="team-04.jpg">team-04.jpg</ProjectItem>
+        </Folder>
+        <Folder Name="products" TargetFolderName="products">
+          <ProjectItem ReplaceParameters="false" TargetFileName="product-01-500x466.jpg">product-01-500x466.jpg</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="product-02-500x575.jpg">product-02-500x575.jpg</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="product-03-270x300.jpg">product-03-270x300.jpg</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="product-03-500x555.png">product-03-500x555.png</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="product-04-270x300.jpg">product-04-270x300.jpg</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="product-04-500x555.png">product-04-500x555.png</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="product-05-270x300.jpg">product-05-270x300.jpg</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="product-05-500x555.png">product-05-500x555.png</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="product-06-270x300.jpg">product-06-270x300.jpg</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="product-06-500x555.png">product-06-500x555.png</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="product-07-270x300.jpg">product-07-270x300.jpg</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="product-08-270x300.jpg">product-08-270x300.jpg</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="product-09-270x300.jpg">product-09-270x300.jpg</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="product-10-270x300.jpg">product-10-270x300.jpg</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="product-11-123x127.jpg">product-11-123x127.jpg</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="product-11-321x450.png">product-11-321x450.png</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="product-11-70x88.jpg">product-11-70x88.jpg</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="product-11-90x90.jpg">product-11-90x90.jpg</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="product-12-123x127.jpg">product-12-123x127.jpg</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="product-12-321x450.png">product-12-321x450.png</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="product-12-70x88.jpg">product-12-70x88.jpg</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="product-12-90x90.jpg">product-12-90x90.jpg</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="product-13-123x127.jpg">product-13-123x127.jpg</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="product-13-321x450.png">product-13-321x450.png</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="product-13-70x88.jpg">product-13-70x88.jpg</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="product-13-90x90.jpg">product-13-90x90.jpg</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="product-14-500x575.jpg">product-14-500x575.jpg</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="product-15-500x466.jpg">product-15-500x466.jpg</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="product-16-321x450.png">product-16-321x450.png</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="product-17-349x388.png">product-17-349x388.png</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="product-18-349x388.png">product-18-349x388.png</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="product-19-349x388.png">product-19-349x388.png</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="product-20-270x300.jpg">product-20-270x300.jpg</ProjectItem>
+        </Folder>
+        <Folder Name="slider" TargetFolderName="slider">
+          <ProjectItem ReplaceParameters="false" TargetFileName="slider-bg-01.jpg">slider-bg-01.jpg</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="slider-bg-02.jpg">slider-bg-02.jpg</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="slider-image-01.png">slider-image-01.png</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="slider-image-02.png">slider-image-02.png</ProjectItem>
+        </Folder>
+      </Folder>
+      <Folder Name="Models" TargetFolderName="Models">
+        <ProjectItem ReplaceParameters="true" TargetFileName="1ViewModel.cs">1ViewModel.cs</ProjectItem>
+        <Folder Name="AdminViewModel" TargetFolderName="AdminViewModel">
+          <ProjectItem ReplaceParameters="true" TargetFileName="EditUserViewModel.cs">EditUserViewModel.cs</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="UserListViewModel.cs">UserListViewModel.cs</ProjectItem>
+        </Folder>
+        <Folder Name="CommentViewModel" TargetFolderName="CommentViewModel">
+          <ProjectItem ReplaceParameters="true" TargetFileName="RelaseCommentViewModel.cs">RelaseCommentViewModel.cs</ProjectItem>
+        </Folder>
+        <Folder Name="CustServerViewModel" TargetFolderName="CustServerViewModel">
+          <ProjectItem ReplaceParameters="true" TargetFileName="FeedBackViewModel.cs">FeedBackViewModel.cs</ProjectItem>
+        </Folder>
+        <Folder Name="DemandViewModel" TargetFolderName="DemandViewModel">
+          <ProjectItem ReplaceParameters="true" TargetFileName="CommentViewModel.cs">CommentViewModel.cs</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="RelaseDemandViewModel.cs">RelaseDemandViewModel.cs</ProjectItem>
+        </Folder>
+        <Folder Name="ReplyViewModel" TargetFolderName="ReplyViewModel">
+          <ProjectItem ReplaceParameters="true" TargetFileName="RelaseReplyViewModel.cs">RelaseReplyViewModel.cs</ProjectItem>
+        </Folder>
+        <Folder Name="UserViewModel" TargetFolderName="UserViewModel">
+          <ProjectItem ReplaceParameters="true" TargetFileName="LoginViewModel.cs">LoginViewModel.cs</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="MyaccountViewModel.cs">MyaccountViewModel.cs</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="RegisteViewModel.cs">RegisteViewModel.cs</ProjectItem>
+        </Folder>
+      </Folder>
+      <ProjectItem ReplaceParameters="true" TargetFileName="packages.config">packages.config</ProjectItem>
+      <Folder Name="Properties" TargetFolderName="Properties">
+        <ProjectItem ReplaceParameters="true" TargetFileName="AssemblyInfo.cs">AssemblyInfo.cs</ProjectItem>
+      </Folder>
+      <Folder Name="Scripts" TargetFolderName="Scripts">
+        <ProjectItem ReplaceParameters="true" TargetFileName="bootstrap.js">bootstrap.js</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="bootstrap.min.js">bootstrap.min.js</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="jquery-3.3.1.intellisense.js">jquery-3.3.1.intellisense.js</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="jquery-3.3.1.js">jquery-3.3.1.js</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="jquery-3.3.1.min.js">jquery-3.3.1.min.js</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="jquery-3.3.1.min.map">jquery-3.3.1.min.map</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="jquery-3.3.1.slim.js">jquery-3.3.1.slim.js</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="jquery-3.3.1.slim.min.js">jquery-3.3.1.slim.min.js</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="jquery-3.3.1.slim.min.map">jquery-3.3.1.slim.min.map</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="jquery.validate-vsdoc.js">jquery.validate-vsdoc.js</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="jquery.validate.js">jquery.validate.js</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="jquery.validate.min.js">jquery.validate.min.js</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="jquery.validate.unobtrusive.js">jquery.validate.unobtrusive.js</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="jquery.validate.unobtrusive.min.js">jquery.validate.unobtrusive.min.js</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="main.js">main.js</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="modernizr-2.8.3.js">modernizr-2.8.3.js</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="vendor.js">vendor.js</ProjectItem>
+      </Folder>
+      <Folder Name="View_old" TargetFolderName="View_old">
+        <ProjectItem ReplaceParameters="true" TargetFileName="Index_basic.cshtml">Index_basic.cshtml</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="Login_basic.cshtml">Login_basic.cshtml</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="Registe_basic.cshtml">Registe_basic.cshtml</ProjectItem>
+      </Folder>
+      <Folder Name="Views" TargetFolderName="Views">
+        <ProjectItem ReplaceParameters="true" TargetFileName="_ViewStart.cshtml">_ViewStart.cshtml</ProjectItem>
+        <Folder Name="Admin" TargetFolderName="Admin">
+          <ProjectItem ReplaceParameters="true" TargetFileName="EditUser.cshtml">EditUser.cshtml</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="Index.cshtml">Index.cshtml</ProjectItem>
+        </Folder>
+        <Folder Name="Comment" TargetFolderName="Comment" />
+        <Folder Name="CustServer" TargetFolderName="CustServer">
+          <ProjectItem ReplaceParameters="true" TargetFileName="Feedback.cshtml">Feedback.cshtml</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="FeedbackDetail.cshtml">FeedbackDetail.cshtml</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="FeedbackList.cshtml">FeedbackList.cshtml</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="Index.cshtml">Index.cshtml</ProjectItem>
+        </Folder>
+        <Folder Name="Deamd" TargetFolderName="Deamd">
+          <ProjectItem ReplaceParameters="true" TargetFileName="DemandDetail - 复制.cshtml">vstg0001.cshtml</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="DemandDetail.cshtml">DemandDetail.cshtml</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="RelaseDemand.cshtml">RelaseDemand.cshtml</ProjectItem>
+        </Folder>
+        <Folder Name="Home" TargetFolderName="Home">
+          <ProjectItem ReplaceParameters="true" TargetFileName="About.cshtml">About.cshtml</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="Contact.cshtml">Contact.cshtml</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="Index.cshtml">Index.cshtml</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="Login.cshtml">Login.cshtml</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="Myaccount.cshtml">Myaccount.cshtml</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="Registe.cshtml">Registe.cshtml</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="SucessResult.cshtml">SucessResult.cshtml</ProjectItem>
+        </Folder>
+        <Folder Name="Reply" TargetFolderName="Reply">
+          <ProjectItem ReplaceParameters="true" TargetFileName="RelaseReply.cshtml">RelaseReply.cshtml</ProjectItem>
+        </Folder>
+        <Folder Name="Shared" TargetFolderName="Shared">
+          <ProjectItem ReplaceParameters="true" TargetFileName="_Layout.cshtml">_Layout.cshtml</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="_LayoutPage1.cshtml">_LayoutPage1.cshtml</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="_LayoutPage1CustServer.cshtml">_LayoutPage1CustServer.cshtml</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="_LayoutPage1CustServerNoTitle.cshtml">_LayoutPage1CustServerNoTitle.cshtml</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="_LayoutPage1Title.cshtml">_LayoutPage1Title.cshtml</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="_LayoutPageLnR.cshtml">_LayoutPageLnR.cshtml</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="Error.cshtml">Error.cshtml</ProjectItem>
+        </Folder>
+        <ProjectItem ReplaceParameters="true" TargetFileName="Web.config">Web.config</ProjectItem>
+      </Folder>
+      <ProjectItem ReplaceParameters="true" TargetFileName="Web.config">Web.config</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="Web.Debug.config">Web.Debug.config</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="Web.Release.config">Web.Release.config</ProjectItem>
+    </Project>
+  </TemplateContent>
+</VSTemplate>

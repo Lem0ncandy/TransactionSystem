@@ -1,0 +1,81 @@
+﻿@model List<TransactionSystem.Domain.DTO.DemandDTO>
+@{
+    ViewBag.TitleA = "需求审核";
+    Layout = "~/Views/Shared/_LayoutPage1CustServer.cshtml";
+}
+
+<div class="main-content-wrapper">
+    <div class="page-content-inner ptb--80 ptb-md--60">
+        <div class="container">
+            <div class="row">
+                <div class="col-12" id="main-content">
+                    <div class="table-content table-responsive">
+                        <div class="table-content table-responsive">
+                            <table class="table compare-table">
+                                <tbody>
+                                    <tr>
+                                        <td style="background-color: #f6f6f6;"><b>需求ID</b></td>
+                                        <td style="background-color: #f6f6f6;"><b>公司名称</b></td>
+                                        <td style="background-color: #f6f6f6;"><b>创建时间</b></td>
+                                        <td style="background-color: #f6f6f6;"><b>标题</b></td>
+                                        <td style="background-color: #f6f6f6;"><b>状态</b></td>
+                                        <td style=" border-width:0px;"></td>
+                                    </tr>
+                                    @foreach (var item in Model)
+                                    {
+                                        <tr>
+                                            <td style="background-color: white;">@item.Id.ToString()</td>
+                                            <td>
+                                                <span class="product-price-wrapper">
+                                                    <span class="money">@item.CompanyName</span>
+                                                </span>
+                                            </td>
+                                            <td>
+                                                <span class="product-price-wrapper">
+                                                    <span class="money">@item.CreateTime.ToLongDateString()@item.CreateTime.ToLongTimeString()</span>
+                                                </span>
+                                            </td>
+                                            <td>
+                                                <span class="product-price-wrapper">
+                                                    <span class="money">@item.Title</span>
+                                                </span>
+                                            </td>
+                                            <td>
+                                                @if (item.IsHidden)
+                                                {
+                                                    @Html.Raw("审核中");
+                                                }
+                                                else
+                                                {
+                                                    @Html.Raw("审核通过");
+                                                }
+                                            </td>
+                                            <td style=" border-width:0px;">
+                                                <div style="display:flex; flex-wrap:nowrap;">
+                                                    @if (!item.IsHidden)
+                                                    {
+                                                    }
+                                                    else
+                                                    {
+                                                        using (Html.BeginForm("ConfirmDemand", "CustServer"))
+                                                        {
+                                                            @Html.Hidden("id", item.Id.ToString())
+                                                            <input type="submit" class="btn btn-size-md" style="width:90px; background-color:red;"value="通过审核"/>
+                                                        }
+
+                                                    }
+
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
